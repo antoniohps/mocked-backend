@@ -4,6 +4,7 @@ var cors = require('cors');
 var app = express();
 app.use(cors());
 
+var port = process.env.PORT || 3000;
 
 
 app.get('/hello', function(req, res) {
@@ -141,6 +142,6 @@ app.get('/api/psychologist/application/attempt/:id/feedback', function(req, res)
     });
 });
 
-app.listen(443, function () {
-  console.log('Example app listening on port 443!');
+app.listen(port, function () {
+  console.log('Example app listening on port ' +  port);
 });
